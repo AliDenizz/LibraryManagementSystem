@@ -1,6 +1,7 @@
 package org.bootcampjava;
 
-import java.time.LocalDate;
+
+import org.bootcampjava.Entities.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -10,10 +11,10 @@ public class Main {
 
         BorrowBook borrowBook1= new BorrowBook();
         borrowBook1.borrowing(user1, book1);
-        User user2= new User(2, "USer2");
 
         ReturnBookService returnBook= new ReturnBookService();
-        returnBook.returning(user1, book1, staff1, LocalDate.now());
+        returnBook.returning(user1, book1, staff1, borrowBook1);
+
 
 
     }
